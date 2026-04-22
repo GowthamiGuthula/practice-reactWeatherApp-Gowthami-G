@@ -4,11 +4,11 @@ import "./CityList.css";
 
 const CityList = ({ cities, onCitySelect }) => {
   return (
-    <div>   
+    <div className="city-list">   
         <h2>Select a City</h2>
-        <ul>
+        <ul className="city-list-items">
             {cities.map((city) => (
-                <li key={city} onClick={() => onCitySelect(city)}>
+                <li  key={city} onClick={() => onCitySelect(city)}>
                     {city}  
                 </li>
             ))}

@@ -28,7 +28,7 @@
 import React, { useState } from "react";
 import CityList from "./Components/CityList";
 import CityForecast from "./Components/CityForecast";
-  
+
 
 const App = () => {
   const [selectedCity, setSelectedCity] = useState(null);
@@ -39,8 +39,8 @@ const App = () => {
   };
 
   return (
-    <div>
-      <CityList cities={cities} onCitySelect={handleCitySelect} />
+    <div className="app">
+      <CityList  cities={cities} onCitySelect={handleCitySelect} />
       {selectedCity && <CityForecast city={selectedCity} />}
     </div>
   );

@@ -39,16 +39,16 @@ const CityForecast = ({ city }) => {
   };    
 
     return (
-        <div>
-            <h2>Weather Forecast for {city}</h2>
+        <div className="city-forecast">
+            <h2  >Weather Forecast for {city}</h2>
             {forecast ? (   
-                <div>
-                    <p>{forecast.summary}</p>
-                    <button onClick={handleViewDetails}>View Details</button>
-                    <div ref={detailsRef} style={{ marginTop: "20px" }}>
-                        <h3>Details</h3>
-                        <p>{forecast.details}</p>
-                    </div>
+                <div className="forecast-container">
+                    <p >{forecast.summary}</p>
+                    <button   onClick={handleViewDetails}>View Details</button>
+                    <div  ref={detailsRef} style={{ marginTop: "20px" }}>
+                        <h3 >Details</h3>
+                        <p >{forecast.details}</p>
+                    </div >
                 </div>
             ) : (   
                 <p>Loading forecast...</p>
